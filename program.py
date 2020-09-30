@@ -73,11 +73,12 @@ while restart:
 
     while True:
         user_input = input()
+        print("")
     
         if user_input == "1":
             lines_printed_normal(data)
             break
-        elif user_input == "1":
+        elif user_input == "2":
             lines_printed_backwards(data)
             break
         elif user_input == "3":
