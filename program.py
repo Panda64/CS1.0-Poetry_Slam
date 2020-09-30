@@ -30,13 +30,11 @@ def lines_printed_backwards(lines_list):
             print(f"{line_num} {i}")
             line_num -= 1
         
-# lines_printed_backwards(data)
 
 def lines_printed_random(lines_list):
     for i in lines_list:
         print(choice(lines_list))
 
-# lines_printed_random(data)
 
 def lines_printed_custom(lines_list):
     for i in lines_list:
@@ -52,5 +50,45 @@ def lines_printed_custom(lines_list):
 
         print(second_half + " " + first_half)
 
-lines_printed_custom(data)
+def lines_printed_normal(lines_list):
+    for i in lines_list:
+        print(i)
 
+print("Welcome to Poetry Slam! The poem that we will be working with today is called Monosyllabics by Laura E. Richards. \n\
+There are a few things you can do with this peoem. Below are the options. Type the number corresponding to which \n\
+version of the poem you would like to see printed below. Feel free to select any as many times as you would like. \n\
+When you are done with this program, simply type 'stop'. Enjoy! :)")
+
+restart = True
+
+while restart:
+    print("\n\
+1. The poem will be printed normally \n\
+2. The peom will be printed in reverse (line wise) \n\
+3. The peom will be printed randomlly (line wise) \n\
+4. The two halves of each line will be swapped in position \n\
+   (Example: 'Hey how are you' will become 'are you? Hey how')")
+
+    user_input = 0
+
+    while True:
+        user_input = input()
+    
+        if user_input == "1":
+            lines_printed_normal(data)
+            break
+        elif user_input == "1":
+            lines_printed_backwards(data)
+            break
+        elif user_input == "3":
+            lines_printed_random(data)
+            break
+        elif user_input == "4":
+            lines_printed_custom(data)
+            break
+        elif user_input == "stop" or user_input == "Stop":
+            restart = False
+            break
+        else:
+            print("You must enter an integer between 1 and 4! Try again.")
+            
