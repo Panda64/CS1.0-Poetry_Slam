@@ -11,6 +11,7 @@ print("")
 def get_file_lines(filename):
     infile = open(filename, "r")
     raw_data = infile.readlines()
+    infile.close()
     
     final_data = [i.rstrip("\n") for i in raw_data]
     
